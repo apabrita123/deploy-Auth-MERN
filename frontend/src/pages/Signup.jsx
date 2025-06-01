@@ -45,7 +45,7 @@ const Signup = () => {
           navigate("/login");
         }, 1000);
       } else if (error) {
-        const details = error.details[0].message;
+        const details = error?.details[0].message;
         return toast.error(details);
       } else if (!success) {
         return toast.error(message);
