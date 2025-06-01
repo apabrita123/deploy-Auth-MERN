@@ -28,7 +28,7 @@ const Signup = () => {
       return toast.error("All fields are required!");
     }
     try {
-      const response = await fetch(`${apiUrl}/signup`, {
+      const response = await fetch(`https://deploy-auth-mern-api-three.vercel.app/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
