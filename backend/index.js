@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 8080;
 const dbConnect = require("./config/dbConnect");
 const cors = require("cors");
 const route = require("./routes/route");
-app.use(cors());
+app.use(cors({ origin: 'https://deploy-auth-mern-ui.vercel.app', credentials: true }));
 app.use(express.json());
 
 dbConnect();
