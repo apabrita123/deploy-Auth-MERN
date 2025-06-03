@@ -38,7 +38,7 @@ exports.login = async (req, res) => {
   } catch (error) {
     res.status(500).json({
       success: false,
-      error: error,
+      error: error.message,
     });
   }
 };
